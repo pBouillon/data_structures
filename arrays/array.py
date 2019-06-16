@@ -8,6 +8,14 @@ Basic implementation of a static array in Python
 
 class Array:
     """Implements a basic static array
+
+           get <─────┐  ┌───── set
+                     |  V
+        ┌─────┬─────┬─────┬─────┬─────┐
+        | ... | ... | ... | ... | ... |
+        └─────┴─────┴─────┴─────┴─────┘
+        <----------------------------->
+                    size
     """
 
     def __init__(self, size: int) -> None:

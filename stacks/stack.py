@@ -8,6 +8,16 @@ Basic implementation of a stack in Python
 
 class Stack:
     """Implements a basic stack
+
+    pop <─────┐     ┌───── push
+              |     V
+            |   ...   |
+            +---------+
+            |   ...   |
+            +---------+
+            |   ...   |
+            +---------+
+
     """
 
     def __init__(self, values: list = None) -> None:
@@ -17,10 +27,9 @@ class Stack:
         """
         self._values = []
 
-
         if not values:
             return
-            
+
         for value in values:
             self.push(value)
 

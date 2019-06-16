@@ -7,6 +7,10 @@ Basic implementation of a queue in Python
 
 class Queue:
     """Implements a basic queue
+
+                     ┬─────┬─────┬─────┬
+        dequeue <───   ... | ... | ...  <─── enqueue
+                     ┴─────┴─────┴─────┴
     """
 
     def __init__(self, values: list = None) -> None:
