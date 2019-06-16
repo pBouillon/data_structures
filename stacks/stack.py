@@ -20,11 +20,13 @@ class Stack:
 
     """
 
-    def __init__(self, values: list = None) -> None:
+    def __init__(self, max_size: int, values: list = None) -> None:
         """Default constructor for a stack
         
+        :param max_size: maximum reachable 
         :param values: optional - list of values to initialize the stack
         """
+        self._max_size = max_size
         self._values = []
 
         if not values:
@@ -60,6 +62,9 @@ class Stack:
 
         :param value: element to push
         """
+        if self.size + 1 == self._max_size:
+            raise IndexError('Max queue size reached')
+        
         self._values.append(value)
     
     @property

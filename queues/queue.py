@@ -13,11 +13,13 @@ class Queue:
                      ┴─────┴─────┴─────┴
     """
 
-    def __init__(self, values: list = None) -> None:
+    def __init__(self, max_size: int, values: list = None) -> None:
         """Default constructor for a queue
         
+        :param max_size: maximum reachable 
         :param values: optional - list of values to initialize the queue
         """
+        self._max_size = max_size
         self._values = []
 
         if not values:
@@ -44,8 +46,13 @@ class Queue:
     def enqueue(self, value: object) -> None:
         """Enqueue an element in the queue
 
+        :raise: an IndexError if the maximum size is reached
+
         :param value: value to enqueue in the queue
         """
+        if self.size + 1 == self._max_size:
+            raise IndexError('Max queue size reached')
+    
         self._values.append(value)
 
     def peak(self) -> object:
