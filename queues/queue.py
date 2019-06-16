@@ -9,7 +9,7 @@ class Queue:
     """Implements a basic queue
 
                      ┬─────┬─────┬─────┬
-        dequeue <───   ... | ... | ...  <─── enqueue
+        dequeue <───   ... | ... | ...   <─── enqueue
                      ┴─────┴─────┴─────┴
     """
 
@@ -55,8 +55,8 @@ class Queue:
     
         self._values.append(value)
 
-    def peak(self) -> object:
-        """Peak at the next element to be dequeued
+    def peek(self) -> object:
+        """Peek at the next element to be dequeued
 
         :return: None if the queue is empty, the next element otherwise
         """
