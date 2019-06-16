@@ -38,6 +38,15 @@ class Array:
         self._nb_elements = 0
         self._values = [None for _ in range(self._size)]
 
+    def contains(self, to_search: object) -> bool:
+        """Search if an element is present in the array
+
+        :param to_search: element to find in the array
+
+        :return: True if the element is found, False otherwise
+        """
+        return any(el == to_search for el in self._values)
+
     def get(self, index: int) -> object:
         """Get the value at a specific index
 

@@ -28,6 +28,15 @@ class Queue:
         for value in values:
             self.enqueue(value)
 
+    def contains(self, to_search: object) -> bool:
+        """Search if an element is present in the array
+
+        :param to_search: element to find in the array
+
+        :return: True if the element is found, False otherwise
+        """
+        return any(el == to_search for el in self._values)
+
     def dequeue(self) -> object:
         """Dequeue an element from the queue
 
@@ -61,6 +70,12 @@ class Queue:
         :return: None if the queue is empty, the next element otherwise
         """
         return None if self.is_empty else self._values[0]
+
+    def remove_all(self) -> None:
+        """Remove all values contained
+        """
+        while not self.is_empty:
+            self.dequeue()
 
     @property
     def is_empty(self):

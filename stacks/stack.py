@@ -35,7 +35,16 @@ class Stack:
         for value in values:
             self.push(value)
 
-    def pek(self) -> object:
+    def contains(self, to_search: object) -> bool:
+        """Search if an element is present in the array
+
+        :param to_search: element to find in the array
+
+        :return: True if the element is found, False otherwise
+        """
+        return any(el == to_search for el in self._values)
+
+    def peek(self) -> object:
         """Peek at the next element to be popped
 
         :return: None if the stack is empty, the next element otherwise
@@ -67,6 +76,12 @@ class Stack:
         
         self._values.append(value)
     
+    def remove_all(self) -> None:
+        """Remove all values contained
+        """
+        while not self.is_empty:
+            self.pop()
+
     @property
     def is_empty(self) -> bool:
         """Check whether the stack is empty or not
