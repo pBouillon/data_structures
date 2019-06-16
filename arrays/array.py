@@ -37,7 +37,6 @@ class Array:
         """
         self._nb_elements = 0
         self._values = [None for _ in range(self._size)]
-    
 
     def get(self, index: int) -> object:
         """Get the value at a specific index
