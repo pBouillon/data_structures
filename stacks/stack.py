@@ -17,6 +17,10 @@ class Stack:
         """
         self._values = []
 
+
+        if not values:
+            return
+            
         for value in values:
             self.push(value)
 
