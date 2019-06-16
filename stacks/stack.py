@@ -35,8 +35,8 @@ class Stack:
         for value in values:
             self.push(value)
 
-    def peak(self) -> object:
-        """Peak at the next element to be popped
+    def pek(self) -> object:
+        """Peek at the next element to be popped
 
         :return: None if the stack is empty, the next element otherwise
         """
