@@ -17,7 +17,6 @@ class Stack:
             +---------+
             |   ...   |
             +---------+
-
     """
 
     def __init__(self, max_size: int, values: list = None) -> None:
@@ -72,7 +71,7 @@ class Stack:
         :param value: element to push
         """
         if self.size + 1 == self._max_size:
-            raise IndexError('Max queue size reached')
+            raise IndexError('Max stack size reached')
         
         self._values.append(value)
     
