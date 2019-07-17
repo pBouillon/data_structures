@@ -2,7 +2,7 @@
 Basic implementation of a stack in Python
 
 :author: Pierre Bouillon [https://pbouillon.github.io/]
-:licence: MIT [https://github.com/pBouillon/data_structures/blob/master/LICENSE]
+:license: MIT [https://github.com/pBouillon/data_structures/blob/master/LICENSE]
 """
 
 
@@ -67,6 +67,8 @@ class Stack:
 
     def push(self, value: object) -> None:
         """Push a new element in the stack
+
+        :raise: an IndexError if there is an attempt to push in a filled array
 
         :param value: element to push
         """
