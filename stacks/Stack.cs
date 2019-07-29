@@ -11,20 +11,19 @@
  */
 
 using System;
-using System.Collections;
+using System.Collections.Generic;
 
-
-namespace Playground
+namespace DataStructures
 {
     /// <summary>
     /// Implements a basic stack
     /// </summary>
-    public class Stack
+    public class Stack<T>
     {
         private readonly int _maxSize;
-        private readonly IList _values;
+        private readonly LinkedList<T> _values;
 
-        public bool IsEmpty 
+        public bool IsEmpty
             => _values.Count == 0;
 
         public int Size
@@ -37,7 +36,7 @@ namespace Playground
         public Stack(int maxSize)
         {
             _maxSize = maxSize;
-            _values = new ArrayList();
+            _values = new LinkedList<T>();
         }
 
         /// <summary>
@@ -45,10 +44,10 @@ namespace Playground
         /// </summary>
         /// <param name="maxSize">maximum reachable</param>
         /// <param name="values">list of values to initialize the stack</param>
-        public Stack(int maxSize, IEnumerable values)
+        public Stack(int maxSize, IEnumerable<T> values)
         {
             _maxSize = maxSize;
-            _values = new ArrayList { values };
+            _values = new LinkedList<T>(values);
         }
 
         /// <summary>
@@ -56,20 +55,20 @@ namespace Playground
         /// </summary>
         /// <param name="toSearch">element to find in the array</param>
         /// <returns>True if the element is found, False otherwise</returns>
-        public bool Contains(object toSearch)
+        public bool Contains(T toSearch)
         {
-            return _values.IndexOf(toSearch) > -1;
+            return _values.Contains(toSearch);
         }
 
         /// <summary>
         /// Peek at the next element to be popped
         /// </summary>
         /// <returns>Null if the stack is empty, the next element otherwise</returns>
-        public object Peek()
+        public T Peek()
         {
             return _values.Count > 0
-                ? _values[0]
-                : null;
+                ? _values.First.Value
+                : default;
         }
 
         /// <summary>
@@ -88,8 +87,8 @@ namespace Playground
                 );
             }
 
-            var popped = _values[0];
-            _values.Remove(popped);
+            var popped = _values.First;
+            _values.RemoveFirst();
 
             return popped;
         }
@@ -101,14 +100,14 @@ namespace Playground
         ///     If there is an attempt to push in a filled array
         /// </exception>
         /// <param name="value">element to push</param>
-        public void Push(object value)
+        public void Push(T value)
         {
             if (_values.Count + 1 > _maxSize)
             {
                 throw new IndexOutOfRangeException("Max stack size reached");
             }
 
-            _values.Add(value);
+            _values.AddFirst(value);
         }
     }
 }
