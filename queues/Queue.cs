@@ -12,7 +12,7 @@ namespace DataStructures
     /// <summary>
     /// Implements a basic queue
     /// </summary>
-    /// <typeparam name="T">Type of the desired queue</typeparam>
+    /// <typeparam name="T">Desired type of the queue</typeparam>
     class Queue<T>
     {
         private int _capacity;

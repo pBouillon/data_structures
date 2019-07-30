@@ -12,7 +12,7 @@ namespace DataStructures
     /// <summary>
     /// Implements a basic static array
     /// </summary>
-    /// <typeparam name="T">Type of the desired array</typeparam>
+    /// <typeparam name="T">Desired type of the array</typeparam>
     class StaticArray<T>
     {
         private T[] _values;
