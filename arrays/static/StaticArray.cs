@@ -2,7 +2,7 @@
  * Basic implementation of a static array in C#
  * 
  * @author: Pierre Bouillon [https://pbouillon.github.io/]
- * @licence: MIT [https://github.com/pBouillon/data_structures/blob/master/LICENSE]
+ * @license: MIT [https://github.com/pBouillon/data_structures/blob/master/LICENSE]
  */
 
 using System;

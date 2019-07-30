@@ -2,7 +2,7 @@
  * Basic implementation of a queue in C#
  * 
  * @author: Pierre Bouillon [https://pbouillon.github.io/]
- * @licence: MIT [https://github.com/pBouillon/data_structures/blob/master/LICENSE]
+ * @license: MIT [https://github.com/pBouillon/data_structures/blob/master/LICENSE]
  */
 
 using System.Collections.Generic;
