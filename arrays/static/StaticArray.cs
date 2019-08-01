@@ -2,7 +2,7 @@
  * Basic implementation of a static array in C#
  * 
  * @author: Pierre Bouillon [https://pbouillon.github.io/]
- * @licence: MIT [https://github.com/pBouillon/data_structures/blob/master/LICENSE]
+ * @license: MIT [https://github.com/pBouillon/data_structures/blob/master/LICENSE]
  */
 
 using System;
@@ -12,7 +12,7 @@ namespace DataStructures
     /// <summary>
     /// Implements a basic static array
     /// </summary>
-    /// <typeparam name="T">Type of the desired array</typeparam>
+    /// <typeparam name="T">Desired type of the array</typeparam>
     class StaticArray<T>
     {
         private T[] _values;

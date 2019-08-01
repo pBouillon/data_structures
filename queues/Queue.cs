@@ -2,7 +2,7 @@
  * Basic implementation of a queue in C#
  * 
  * @author: Pierre Bouillon [https://pbouillon.github.io/]
- * @licence: MIT [https://github.com/pBouillon/data_structures/blob/master/LICENSE]
+ * @license: MIT [https://github.com/pBouillon/data_structures/blob/master/LICENSE]
  */
 
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ namespace DataStructures
     /// <summary>
     /// Implements a basic queue
     /// </summary>
-    /// <typeparam name="T">Type of the desired queue</typeparam>
+    /// <typeparam name="T">Desired type of the queue</typeparam>
     class Queue<T>
     {
         private int _capacity;
