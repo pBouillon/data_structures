@@ -1,3 +1,3 @@
 # Data structure: Array (dynamic)
 
-TODO
+A dynamic array is a data structure 
