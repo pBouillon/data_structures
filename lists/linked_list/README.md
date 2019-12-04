@@ -19,9 +19,10 @@ Schematic representation:
 
 ## Complexity
 
-| Operation                                   | Complexity               |
-|:-------------------------------------------:|:------------------------:|
-| Insert / Delete at the beginning            |           O(1)           |
-| Insert/delete at end (knowing the tail)     |           O(1)           |
-| Insert/delete at end (not knowing the tail) |           O(n)           |
-| Insert/delete in the linked list            |    search time + O(1)    |
+| Operation                                     | Complexity               |
+|:---------------------------------------------:|:------------------------:|
+| Insert / Delete at the beginning              |           O(1)           |
+| Insert / Delete at end (knowing the tail)     |           O(1)           |
+| Insert / Delete at end (not knowing the tail) |           O(n)           |
+| Insert / Delete in the linked list            |    search time + O(1)    |
+| Search                                        |           O(n)           |
